@@ -3,41 +3,119 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Hachanah — Support</title>
+<title>Hachanah — Shabbat &amp; Yom Tov Meal Planner</title>
+<meta name="description" content="Hachanah is the all-in-one kosher meal planning app: plan Shabbat and Yom Tov menus, convert recipes to parve in a tap, auto-build grocery lists, and cook on schedule.">
 <style>
-  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-         max-width: 640px; margin: 0 auto; padding: 24px; line-height: 1.6; color: #222; }
-  h1 { color: #1a5c4f; }
-  a { color: #1a5c4f; }
-  .card { background: #f5f7f6; border-radius: 12px; padding: 16px 20px; margin: 16px 0; }
-  footer { margin-top: 48px; font-size: 0.85em; color: #777; }
+  :root {
+    --blue: #16247e;
+    --blue-deep: #0e1857;
+    --gold: #f5a623;
+    --gold-light: #ffd28a;
+    --ink: #22243a;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+         color: var(--ink); background: #fafaff; line-height: 1.6; }
+  a { color: var(--blue); }
+
+  .hero { background: linear-gradient(160deg, var(--blue) 0%, var(--blue-deep) 100%);
+          color: #fff; text-align: center; padding: 56px 24px 64px; }
+  .hero img.icon { width: 120px; height: 120px; border-radius: 27px;
+                   box-shadow: 0 12px 32px rgba(0,0,0,.35); }
+  .hero h1 { font-size: 2.6em; margin: 20px 0 8px; letter-spacing: -0.02em; }
+  .hero .tagline { font-size: 1.25em; color: var(--gold-light); margin: 0 0 6px; font-weight: 600; }
+  .hero .sub { max-width: 560px; margin: 0 auto; color: rgba(255,255,255,.85); }
+  .store-badge { display: inline-block; margin-top: 28px; background: var(--gold); color: var(--blue-deep);
+                 font-weight: 700; padding: 14px 28px; border-radius: 999px; text-decoration: none;
+                 box-shadow: 0 6px 18px rgba(0,0,0,.3); }
+
+  .shots { display: flex; gap: 20px; overflow-x: auto; padding: 40px 24px;
+           scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; }
+  .shot { flex: 0 0 auto; width: 240px; scroll-snap-align: center; text-align: center; }
+  .shot img { width: 100%; border-radius: 24px; border: 1px solid #e3e3ef;
+              box-shadow: 0 10px 28px rgba(20, 25, 80, .14); }
+  .shot p { font-size: .9em; color: #555; margin-top: 10px; font-weight: 600; }
+
+  .features { max-width: 880px; margin: 8px auto 40px; padding: 0 24px;
+              display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
+  .feature { background: #fff; border: 1px solid #e8e8f2; border-radius: 16px; padding: 20px; }
+  .feature h3 { margin: 0 0 6px; color: var(--blue); font-size: 1.05em; }
+  .feature p { margin: 0; font-size: .95em; color: #444; }
+
+  footer { text-align: center; padding: 32px 24px 48px; font-size: .9em; color: #777; }
+  footer a { margin: 0 10px; }
 </style>
 </head>
 <body>
-<h1>Hachanah</h1>
-<p><strong>Your complete Shabbat, Yom Tov, and Chol meal planner.</strong></p>
 
-<h2>Support</h2>
-<div class="card">
-  <p>Questions, bug reports, or feature requests? Email us and we'll get back to you as soon as we can:</p>
-  <p><a href="mailto:hachanah.app@gmail.com?subject=Hachanah%20Support">hachanah.app@gmail.com</a></p>
-</div>
+<section class="hero">
+  <img class="icon" src="assets/icon.png" alt="Hachanah app icon — a braided challah in the shape of an infinity symbol">
+  <h1>Hachanah</h1>
+  <p class="tagline">Shabbat and Yom Tov, covered.</p>
+  <p class="sub">Plan meals with family &amp; friends, make any recipe parve in a tap, build grocery lists that know your pantry, and cook it all on time.</p>
+  <!-- Once live, point this at your App Store page:
+       https://apps.apple.com/app/idXXXXXXXXX -->
+  <a class="store-badge" href="support.html">Coming soon to the App&nbsp;Store</a>
+</section>
 
-<h2>Frequently Asked</h2>
-<p><strong>Where is my data stored?</strong><br>
-In your own iCloud account. Recipes, meal plans, grocery lists, and pantry items sync privately across your devices via iCloud.</p>
+<section class="shots" aria-label="App screenshots">
+  <div class="shot">
+    <img src="assets/1-meals-planner.png" alt="Shabbat meal planner with dishes grouped by course">
+    <p>Plan every Shabbat &amp; Yom Tov meal</p>
+  </div>
+  <div class="shot">
+    <img src="assets/2-recipes-list.png" alt="Recipe list with kashrut badges">
+    <p>Your kosher recipe box</p>
+  </div>
+  <div class="shot">
+    <img src="assets/7-parve-conversion.png" alt="Recipe converted to parve with ingredient swaps">
+    <p>Make any recipe parve in a tap</p>
+  </div>
+  <div class="shot">
+    <img src="assets/5-grocery-list.png" alt="Categorized grocery list with store tags">
+    <p>Grocery lists that know your pantry</p>
+  </div>
+  <div class="shot">
+    <img src="assets/6-cook-plan.png" alt="Cooking plan with prep timeline">
+    <p>Cook everything on schedule</p>
+  </div>
+</section>
 
-<p><strong>Do I need an AI subscription?</strong><br>
-No. Core features work without any AI. Optionally, you can connect your own Claude or OpenAI API key (or use on-device Apple Intelligence) for menu suggestions, recipe import, and cooking plans.</p>
+<section class="features">
+  <div class="feature">
+    <h3>Built for the Jewish home</h3>
+    <p>Meat, dairy, and parve tracking; Ashkenazi, Sephardi &amp; Yemenite standards; candle-lighting times; full Pesach mode.</p>
+  </div>
+  <div class="feature">
+    <h3>Tap to parve</h3>
+    <p>Convertible recipes get a real, editable parve copy with smart substitutions — swap any replacement you'd rather change.</p>
+  </div>
+  <div class="feature">
+    <h3>Smart groceries</h3>
+    <p>Lists build themselves from your menus, skip what's in your pantry, and merge new recipes into lists you've already made.</p>
+  </div>
+  <div class="feature">
+    <h3>AI-guided cooking</h3>
+    <p>Day-by-day prep timelines, mise en place, and step-by-step Cook Now mode with the right ingredients at each step.</p>
+  </div>
+  <div class="feature">
+    <h3>Family &amp; friends</h3>
+    <p>Share your kitchen with family, add friends with a QR scan, and discover public recipe collections — filterable from $ to $$$$.</p>
+  </div>
+  <div class="feature">
+    <h3>Private by design</h3>
+    <p>Your data lives in your own iCloud. No ads, no tracking, no analytics. Bring your own AI key — or use none at all.</p>
+  </div>
+</section>
 
-<p><strong>How do I share with family?</strong><br>
-Open the People tab and invite family members — they'll see your shared recipes and meal plans in their Family Kitchen. Friends can be added by search, invite link, or scanning your profile QR code.</p>
+<footer>
+  <p>
+    <a href="support.html">Support</a> ·
+    <a href="privacy.html">Privacy Policy</a> ·
+    <a href="mailto:hachanah.app@gmail.com">hachanah.app@gmail.com</a>
+  </p>
+  <p>© 2026 Hachanah. All rights reserved.</p>
+</footer>
 
-<p><strong>How do I delete my data?</strong><br>
-Deleting the app removes local data; to remove synced data, delete Hachanah's data under Settings → Apple ID → iCloud → Manage Account Storage. To remove a public profile or published collections, unpublish them in the app or contact us.</p>
-
-<p>See our <a href="privacy.html">Privacy Policy</a>.</p>
-
-<footer>© 2026 Hachanah. All rights reserved.</footer>
 </body>
 </html>
